@@ -8,10 +8,10 @@ function reload(){
 }
 
 async function fetchNews(query){
-    const res = await fetch(`${url}${query}&apikey=${API_KEY}`);
+    const res = await fetch("https://newsapi.org/v2/everything?q=India&apikey=1ae39580930847699affe0f90f88efd2");
     const data = await res.json();
     bindData(data.articles);
-} 
+}
 
 function bindData(articles){
     const cardsContainer = document.getElementById("cards-container");
